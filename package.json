@@ -1,0 +1,11 @@
+{
+  "name": "store-image-ardrawing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chuhuumanh/store-image-ardrawing.git",
+  "author": "manh chu the <manhchu@fetch.tech>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
