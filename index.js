@@ -51,6 +51,11 @@ app.get("/:path(*)", async function (req, res) {
   }
 });
 
+app.post("/generate-file-json", async function (req, res) {
+  const data = req.body;
+  res.send(data);
+});
+
 // Khởi động máy chủ
 const port = 2999;
 app.listen(port, () => {
