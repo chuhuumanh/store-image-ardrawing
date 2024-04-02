@@ -6,6 +6,11 @@
   "author": "manh chu the <manhchu@fetch.tech>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
   }
 }
