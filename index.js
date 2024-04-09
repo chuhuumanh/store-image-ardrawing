@@ -123,19 +123,6 @@ app.post("/generate-file-json", async function (req, res) {
     for (tags of tagsAll) {
       let wallpaperAll = filesData.filter(fileName => fileName.includes(tags[0]));
       const wallpaperHD = wallpaperAll.filter(fileName => !fileName.includes('thumb'));
-      let wallpaperCate = [];
-
-      for (const wallpaper of wallpaperHD) {
-        const first = wallpaper.substring(0, wallpaper.indexOf('-'));
-        if (tags[1] == true && first == tags[0]) {
-          wallpaperCate.push(wallpaper)
-        }
-        const index = wallpaper.indexOf('-') + 1;
-        if (tags[1] === false && wallpaper.substring(index).includes(tags[0])) {
-          wallpaperCate.push(wallpaper)
-        }
-
-      }
 
       let data = {
         name: tags[0],
