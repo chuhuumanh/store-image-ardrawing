@@ -111,8 +111,8 @@ app.post("/generate-file-json", async function (req, res) {
     for (file of hdFiles) {
       if (isVideo(file) == false) {
         const fileThumb = file.replace('hd', 'thumb');
-        const exists = file.includes(fileThumb);
-        if (!exists) {
+        const thumbPath = `./public/Wallpaper-Anime/${fileThumb}`
+        if (!fs.existsSync(thumbPath)) {
           const thumbnail = await imageThumbnail(`./public/Wallpaper-Anime/${file}`);
           fs.writeFileSync(`./public/Wallpaper-Anime/${fileThumb}`, thumbnail);
           filesData.push(fileThumb)
