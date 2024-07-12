@@ -3,7 +3,6 @@ const {globSync} = require('glob');
 const fs = require('fs/promises');
 const app = express();
 const path = require('path');
-const jsonFormat = require('json-format')
 // Thiết lập thư mục public
 app.use(express.static("public"));
 
